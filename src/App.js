@@ -1,25 +1,29 @@
 import React, { Component } from "react";
-import "./styles/App.sass";
+import "./App.sass";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Route, Switch } from "react-router-dom";
-import ContentList from "./pages/ContentList";
-import ContentDetail from "./pages/ContentDetail";
+import Home from "./pages/Home";
+import Single from "./pages/Single";
+import { Provider } from "react-redux";
+import generateStore from "./redux/store";
 
 export default class App extends Component {
 	render() {
+		const store = generateStore();
 		return (
-			<div className="app">
+			<Provider store={store}>
 				<Header />
 				<Router>
 					<Switch>
-						<Route exact path="/" component={ContentList} />
-						<Route path="/details/:id" component={ContentDetail} />
+						<Route exact path="/" component={Home} />
+						<Route path="/title/:id" component={Single} />
+						<Route>404 not found!</Route>
 					</Switch>
 				</Router>
 				<Footer />
-			</div>
+			</Provider>
 		);
 	}
 }

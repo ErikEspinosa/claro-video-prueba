@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./ShareButtons.sass";
 import mail from "../assets/mail.svg";
 import share from "../assets/share.svg";
 

@@ -1,10 +1,13 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
-import actions from "./actions";
+
+import titleListReducer from "./titleListDuck";
+import titleDetailReducer from "./titleDetailDuck";
 
 const rootReducer = combineReducers({
-	contentList: actions,
+	titleList: titleListReducer,
+	titleDetail: titleDetailReducer,
 });
 
 export default function generateStore() {
