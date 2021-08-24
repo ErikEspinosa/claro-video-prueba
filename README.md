@@ -38,13 +38,21 @@ https://dev.erikespinosar.com/
 - Clonar el repositorio (git clone https://github.com/ErikEspinosa/claro-video-prueba.git)
 - Posicionarse en la carpeta del repositorio e instalar las dependencias:
   > npm install
-  > npm install redux --save
-  > npm install react-redux --save
-  > npm install redux-devtools-extension --save
-  > npm install redux-thunk --save
-  > npm install axios --save
-  > npm install react-router-dom --save
-  > npm install node-sass --save
+
+> npm install redux --save
+
+> npm install react-redux --save
+
+> npm install redux-devtools-extension --save
+
+> npm install redux-thunk --save
+
+> npm install axios --save
+
+> npm install react-router-dom --save
+
+> npm install node-sass --save
+
 - Correr el proyecto en el puerto por defecto (npm start)
   ** Si llegara a mostrar un error relacionado con el directorio ./src/Redux, renombrarlo por ./src/redux y ejecutar nuevamente el servidor (npm start) **
 
