@@ -7,7 +7,7 @@ export default class ShareButtons extends Component {
 	render() {
 		return (
 			<div className="share">
-				<a href="https://erikespinosar.com" title="Email">
+				<a href="info@erikespinosar.com" title="Email">
 					<span className="circle">
 						<img src={mail} alt="Email" />
 					</span>

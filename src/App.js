@@ -6,6 +6,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import Single from "./pages/Single";
+import NotFound from "./pages/NotFound";
 import { Provider } from "react-redux";
 import generateStore from "./redux/store";
 
@@ -19,7 +20,9 @@ export default class App extends Component {
 					<Switch>
 						<Route exact path="/" component={Home} />
 						<Route path="/title/:id" component={Single} />
-						<Route>404 not found!</Route>
+						<Route>
+							<NotFound />
+						</Route>
 					</Switch>
 				</Router>
 				<Footer />
