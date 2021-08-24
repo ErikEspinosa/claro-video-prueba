@@ -2,9 +2,12 @@ import axios from "axios";
 
 const inialState = {
 	detail: [],
+	isLoading: true,
+	isError: false,
 };
 
 const GET_TITLE_DETAIL_SUCCESS = "GET_TITLE_DETAIL_SUCCESS";
+const GET_TITLE_DETAIL_FAILURE = "GET_TITLE_DETAIL_FAILURE";
 
 export default function titleDetailReducer(state = inialState, action) {
 	switch (action.type) {
@@ -12,6 +15,13 @@ export default function titleDetailReducer(state = inialState, action) {
 			return {
 				...state,
 				detail: action.payload,
+				isLoading: false,
+			};
+		case GET_TITLE_DETAIL_FAILURE:
+			return {
+				...state,
+				isLoading: false,
+				isError: true,
 			};
 		default:
 			return state;
@@ -29,5 +39,8 @@ export const getTitleDetailAction = (id) => async (dispatch) => {
 		});
 	} catch (error) {
 		console.log(error);
+		dispatch({
+			type: GET_TITLE_DETAIL_FAILURE,
+		});
 	}
 };

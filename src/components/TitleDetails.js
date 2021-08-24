@@ -15,6 +15,10 @@ export default class TitleDetails extends Component {
 		return (
 			<div>
 				<Return />
+				{this.props.isloading && <h3>Cargando contenido...</h3>}
+				{this.props.iserror && (
+					<h3>Hubo un error al conectar con el servicio.</h3>
+				)}
 				<div className="content-detail" style={backgroundPoster}>
 					<h1>{detail.title}</h1>
 					<div className="content">

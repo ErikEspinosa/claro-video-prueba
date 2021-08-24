@@ -9,13 +9,19 @@ function Single() {
 	const { id } = useParams();
 	const dispatch = useDispatch();
 	const titleDetail = useSelector((store) => store.titleDetail.detail);
+	const isLoading = useSelector((store) => store.titleDetail.isLoading);
+	const isError = useSelector((store) => store.titleDetail.isError);
 	useEffect(() => {
 		dispatch(getTitleDetailAction(id));
 	}, [dispatch, id]);
 
 	return (
 		<div className="container">
-			<TitleDetails detail={titleDetail} />
+			<TitleDetails
+				detail={titleDetail}
+				isloading={isLoading}
+				iserror={isError}
+			/>
 		</div>
 	);
 }

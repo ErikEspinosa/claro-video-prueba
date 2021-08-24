@@ -32,6 +32,10 @@ export default class TitleList extends Component {
 						></input>
 					</form>
 				</div>
+				{this.props.isloading && <h3>Cargando contenido...</h3>}
+				{this.props.iserror && (
+					<h3>Hubo un error al conectar con el servicio.</h3>
+				)}
 				<ul className="title-list">
 					{this.props.titles
 						.filter(
