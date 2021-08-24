@@ -4,10 +4,14 @@
     padding: 1rem 0
     .content
         display: flex
+        @media screen and (max-width: $mobile)
+            display: block
         .poster
             min-width: 400px
             height: 300px
             margin-right: 1rem
+            @media screen and (max-width: $mobile)
+                min-width: 100%
         .info
             .details
                 display: flex
