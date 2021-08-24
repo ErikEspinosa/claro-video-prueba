@@ -4,16 +4,13 @@ import "./TitleItem.sass";
 
 export default class TitleItem extends Component {
 	render() {
-		const poster = {
-			backgroundImage: `url(https://image.tmdb.org/t/p/w500${this.props.item.backdrop_path})`,
-			backgroundSize: "cover",
-			backgroundPosition: "center",
-		};
 		return (
 			<Link to={`/title/${this.props.item.id}`}>
-				<li key={this.props.id} className="title-item" style={poster}>
-					<span className="title">{this.props.item.title}</span>
-				</li>
+				<img
+					key={this.props.id}
+					src={this.props.item.image_small}
+					alt={this.props.item.title}
+				/>
 			</Link>
 		);
 	}
