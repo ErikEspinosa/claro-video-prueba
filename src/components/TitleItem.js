@@ -14,7 +14,9 @@ export default class TitleItem extends Component {
 						backgroundSize: "cover",
 						backgroundPosition: "center",
 					}}
-				></li>
+				>
+					<h2>{this.props.item.title}</h2>
+				</li>
 			</Link>
 		);
 	}
