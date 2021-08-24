@@ -37,7 +37,8 @@ https://dev.erikespinosar.com/
 - Abrir la aplicación de Consola/Terminal
 - Clonar el repositorio (git clone https://github.com/ErikEspinosa/claro-video-prueba.git)
 - Posicionarse en la carpeta del repositorio e instalar las dependencias:
-  > npm install
+
+> npm install
 
 > npm install redux --save
 
